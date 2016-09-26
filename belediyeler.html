@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>iletişim</title>
+    <title>Belediye Sayfası</title>
 
     <!-- Bootstrap CSS -->
     <!-- Stil Dosyaları -->
@@ -39,6 +39,25 @@
     <!-- SOSYAL MEDYA -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57e840699f6f7089"></script>
 
+    <!-- ANGULARJS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script>
+        var uygulama=angular.module("uygulama",[]);
+        uygulama.controller("mycontrol",function($scope,$http){
+
+            $http.get("https://jsonplaceholder.typicode.com/posts").then(function(response){
+
+
+                $scope.veriler=response.data;
+            });
+
+
+        });
+
+
+
+
+    </script>
 
 
     <script type="text/javascript">
@@ -359,142 +378,214 @@
 <!--- HEADER BİTTİ --->
 
 
-<!--- KÜÇÜK Slider Başladı --->
-<div class="container">
-    <div class="slider-ince visible2" id="slider2">
-        <div class="visible-inner">
-            <ul>
-                <li>
-                    <a href="#">
-                        <img class="img-responsive" src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img class="img-responsive" src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img class="img-responsive" src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="slider/sl1.jpg" alt=""/>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-        <a class="prev" href="#"><i class="fa fa-angle-left"></i></a>
-        <a class="next" href="#"><i class="fa fa-angle-right"></i></a>
-    </div>
-</div>
-
 <div class="container">
     <div class="ilce-alani">
 
         <div class="row">
             <div class="col-md-9">
-                <h3 class="iletisim-baslik">İLETİŞİM & ADRESLER</h3>
-                <hr>
-                <div class="map">
-                    <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Kuningan,+Jakarta+Capital+Region,+Indonesia&amp;aq=3&amp;oq=kuningan+&amp;sll=37.0625,-95.677068&amp;sspn=37.410045,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Kuningan&amp;t=m&amp;z=14&amp;ll=-6.238824,106.830177&amp;output=embed">
-                    </iframe>
-                </div>
+                <div class="kurumsal-yazi-alani">
+                    <h3 class="kurumsal-baslik">Belediyeler</h3>
+                    <hr>
+                    <!--ARAMA -->
+                        <div class="input-group">
+
+                            <input type="text" class="form-control" ng-model="arama" placeholder="Belediye ara...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Arama</button>
+      </span>
+                        </div>
 
 
-                <div class="iletisim-alani">
-                    <div class="col-md-8">
-                        <form class="form-horizontal" role="form">
-                            <div class="form-group">
+                    <hr>
 
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputEmail3" placeholder="İsim-Soyisim">
+
+
+                    <div class="row">
+                        <div class="col-md-4">
+
+                            <div class="thumbnail">
+
+                                <img class="img-responsive" src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
                                 </div>
                             </div>
-                            <div class="form-group">
-
-                                <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputPassword3" placeholder="E-posta adresi">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
 
-                                <div class="col-sm-10">
-                                    <textarea class="form-control" rows="8" placeholder="Mesajınız..."></textarea>
+
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-7 col-sm-10">
-                                    <button type="submit" class="btn btn-success">Gönder</button>
+
+
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
                                 </div>
                             </div>
-                        </form>
+
+
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+
+
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+
+
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+
+
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+
+
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+
+
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+
+
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/250x200" alt="...">
+                                <div class="caption">
+                                    <h3>Belediye İsmi</h3>
+                                    <p>Belediye Kısa acıklama ...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Sayfası</a> <a href="#" class="btn btn-danger" role="button">Haberleri</a></p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <h3 class="panel-heading">
-                            Adresler
-                        </h3>
-                        <p>Emirefendi Mahallesi 2345 sok no:/bb bafra/SAMSUN</p><br>
-                        <p><i class="fa fa-phone"></i> &nbsp; Tel: 4567890</p>
-                        <p><i class="fa fa-fax"></i> &nbsp; fax: 4567890</p>
-                        <p><i class="fa fa-mail-forward"></i> &nbsp; samet@samet.com</p>
 
-                    </div>
+
+
 
                 </div>
-
-
-
-
 
             </div>
 
@@ -505,11 +596,122 @@
                 <div class="sidebar-reklam">
                     <div class="list-group">
                         <a href="#" class="list-group-item active">
-                            <i class="fa fa-cloud"></i>&nbsp;&nbsp; REKLAM ALANI
+                            <i class="fa fa-adjust"></i>&nbsp;&nbsp; REKLAM ALANI
                         </a>
                         <img   src="slider/sl1.jpg" width="260" height="200" alt="">
                     </div>
                 </div>
+
+
+                <div class="son-haberler">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active">
+                            <i class="fa fa-newspaper-o"></i>
+                            SON HABERLER
+                        </a>
+                        <ul style="overflow-y: scroll;height: 425px">
+
+                            <div class="media list-group-item">
+                                <a class="media-left" href="#">
+                                    <img src="img/alt-ek.png" alt="">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Haberler 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                    </p>
+                                    <div class="ficon">
+                                        <a href="" alt="">Devamı >></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="media list-group-item">
+                                <a class="media-left" href="#">
+                                    <img src="img/alt-ek.png" alt="">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Haberler 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                    </p>
+                                    <div class="ficon">
+                                        <a href="" alt="">Devamı >></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="media list-group-item">
+                                <a class="media-left" href="#">
+                                    <img src="img/alt-ek.png" alt="">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Haberler 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                    </p>
+                                    <div class="ficon">
+                                        <a href="" alt="">Devamı >></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="media list-group-item">
+                                <a class="media-left" href="#">
+                                    <img src="img/alt-ek.png" alt="">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Haberler 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                    </p>
+                                    <div class="ficon">
+                                        <a href="" alt="">Devamı >></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="media list-group-item">
+                                <a class="media-left" href="#">
+                                    <img src="img/alt-ek.png" alt="">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Haberler 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                    </p>
+                                    <div class="ficon">
+                                        <a href="" alt="">Devamı >></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="media list-group-item">
+                                <a class="media-left" href="#">
+                                    <img src="img/alt-ek.png" alt="">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Haberler 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                    </p>
+                                    <div class="ficon">
+                                        <a href="" alt="">Devamı >></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
 
                 <div class="kose-yazar">
                     <div class="list-group">

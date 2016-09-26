@@ -517,3 +517,9 @@ font-weight: 700;
   padding-right: 5px;
   padding-left: 15px;
 }
+
+.thumbnail img:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: .5s;
+}
