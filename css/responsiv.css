@@ -1,0 +1,69 @@
+/*****
+Rahman ve Rahim olan Hz. Allah'ın ismi şerifi ile...
+Musannıf: A.Samed OCAK
+Mevzu: Alî site-i stil-ü Makber
+Gaye: Tasavvurat ve tasdikat
+Tarif: stül-ü sahih-i Stül-ü fasıktan ayırmak
+*******/
+
+
+@media (max-width: 760px) {
+    .belediyeler{
+        width: 100%;
+    }
+    .son-yazilar{
+        width: 100%;
+    }
+    .ilce-haber{
+        width: 100%;
+    }
+    .ilce-haber-aciklama{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .belediyeler{
+        width: 100%;
+    }
+    .son-yazilar{
+        width: 100%;
+    }
+
+    .ilce-haber{
+        width: 100%;
+    }
+    .ilce-haber-aciklama{
+        width: 100%;
+    }
+    .sayfalar{
+        display: none;
+    }
+    .tarih-saat{
+        display: none;
+    }
+    .soc{
+        overflow:hidden;
+        margin: 2px;
+        width: 130%;
+        margin-left: -55px;
+        margin-top: 7px;
+        /* position: absolute; */
+        float: left;
+        list-style:none;
+    }
+    .son-yazilar p{
+        font-size: 15px;
+        margin-left: 3px;
+    }
+    .yazarlar-kay{
+        margin-left: -27px;
+        width: 113%;
+    }
+    .belediye-aciklama{
+        text-align: center;
+    }
+
+
+}

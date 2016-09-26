@@ -1,0 +1,234 @@
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.slider {
+    position: relative;
+    padding: 0px
+}
+
+.slider-ince {
+    position: relative;
+    padding: 0px
+}
+.slider,
+.slider ul li,
+.slider ul li a img {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 30px;
+
+}
+
+.slider-ince,
+.slider-ince ul li,
+.slider-ince ul li a img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+
+}
+
+
+.slider a.prev,
+.slider a.next {
+    background: rgba(0,0,0,.7);
+    padding: 6px;
+    position: absolute;
+    top: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.slider a.next {
+    right: 0px;
+}
+.slider a.prev {
+    left: 0px
+}
+.slider a.next:hover,
+.slider a.prev:hover {
+    background-color: dodgerblue;
+    color: #fff
+}
+
+/* sayfalama */
+.slider .pagination {
+    position: absolute;
+    bottom: -20px;
+    left: 2px;
+}
+.slider .pagination a {
+    float: left;
+    padding: 10px 13px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    background: rgb(40, 29, 29);
+    /* border-radius: 5px; */
+    margin-right: 2px;
+    font-family: Lato;
+}
+.slider .pagination a.active {
+    background-color: #ffffff;
+    color: #0f0f0f;
+}
+
+.slider .pagination a:hover {
+    background-color: #ffffff;
+    color: #0f0f0f;
+}
+
+
+
+
+
+
+.slider-ince a.prev,
+.slider-ince a.next {
+    background: rgba(0,0,0,.7);
+    padding: 6px;
+    position: absolute;
+    top: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.slider-ince a.next {
+    right: 0px;
+}
+.slider-ince a.prev {
+    left: 0px
+}
+.slider-ince a.next:hover,
+.slider-ince a.prev:hover {
+    background-color: dodgerblue;
+    color: #fff
+}
+
+/* sayfalama */
+.slider-ince .pagination {
+    position: absolute;
+    bottom: -20px;
+    left: 2px;
+}
+.slider-ince .pagination a {
+    float: left;
+    padding: 10px 13px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    background: rgb(40, 29, 29);
+    /* border-radius: 5px; */
+    margin-right: 2px;
+}
+.slider-ince .pagination a.active {
+    background-color: #ffffff;
+    color: #0f0f0f;
+}
+
+
+
+
+
+
+
+/* carousel */
+.visible {
+    width: 100%;
+    height: auto;
+}
+.visible-inner ul li,
+.visible-inner ul,
+.visible-inner ul li a img {
+    width: 100%;
+    height: 200px;
+    margin-right: 5px;
+}
+
+
+.visible-inner1 ul li,
+.visible-inner1 ul,
+.visible-inner1 ul li a img {
+    width: 100%;
+    height: 60px;
+    margin-right: 5px;
+}
+
+
+.visible a.next,
+.visible a.prev {
+    height: 61px;
+    line-height: 52px;
+    margin-top: -20px;
+    width: 25px;
+    font-size: 35px;
+    text-align: center;
+    padding: 2px;
+}
+
+.visible2 a.next,
+.visible2 a.prev {
+    height: 61px;
+    line-height: 52px;
+    margin-top: 42px;
+    width: 25px;
+    font-size: 35px;
+    text-align: center;
+    padding: 2px;
+}
+
+
+
+/* carousel vertical */
+.visible.vertical {
+    width: 185px;
+    height: 315px
+}
+.visible.vertical .visible-inner ul li {
+    margin-bottom: 5px;
+}
+.visible.vertical a.next,
+.visible.vertical a.prev {
+    height: 20px;
+    line-height: 20px
+}
+
+/* vertical */
+.vertical a.next {
+    left: 50%;
+    width: 70px;
+    margin-left: -35px;
+    text-align: center;
+}
+.vertical a.prev {
+    left: 50%;
+    width: 70px;
+    top: auto;
+    bottom: 20px;
+    margin-left: -35px;
+    text-align: center;
+}
+
+/* list */
+.list {
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    border-top: 3px solid #111
+}
+.list ul li {
+    float: left;
+    width: 120px;
+    height: 60px;
+    opacity: .5
+}
+.list ul li a img {
+    width: 120px;
+    height: 60px
+}
+.list ul li.active {
+    opacity: 1
+}
