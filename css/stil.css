@@ -75,10 +75,10 @@ float: right;
   color: #fff;
   top: 20px;
   width: 100%;
-  height: 90px;
+  height: auto;
   display: block;
   position: relative;
-  background: #a2c07c;
+
   margin-bottom: 20px;
 }
 .son-yazilar{
@@ -115,8 +115,9 @@ float: right;
   width: 100%;
   display: block;
   position: relative;
-  height: 250px;
+  height: auto;
   background: #f5f1f1;
+  margin-bottom: 10px;
 }
 .belediyeler{
   width: 120%;
@@ -196,12 +197,12 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.35);
 .reklam-775{
   text-align: center;
   color: #fff;
-  top: -20px;
-  width: 100%;
+
+   width: 100%;
   height: 320px;
   display: inline-block;
   position: relative;
-  background: #ffa39e;
+
   margin-bottom: 20px;
 }
 .ilce-alani{
@@ -438,7 +439,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.35);
 .yazar-kutu{
   width: 100%;
   height: 60px !important;
-  margin-right: 5px;
+ margin-left: 0px;
   display: inline-block;
   position: relative;
   background: #a33537;
@@ -522,4 +523,15 @@ font-weight: 700;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   transition: .5s;
+}
+.slider-ince .visible-inner ul li img:hover{
+  border: 2px solid #000;
+
+}
+.kunye{
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  height:auto;
 }
