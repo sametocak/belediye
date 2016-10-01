@@ -14,7 +14,11 @@ Tarif: Makbul bir stül-ü ahval kelam dile getirmek
  Varela' BAŞLIK
  Lato'  İçerik
 */
-
+img {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
 p{
   font-family: Lato !important;
 }
@@ -167,7 +171,7 @@ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.35);
   box-shadow:1px 1px 10px rgba(0, 0, 0, 0.35) ;
 }
 .ilce-haber-aciklama{
-  width: 118%;
+  width: 100%;
   border-radius: 3px;
   font-family: Raleway;
   font-weight: 200;
@@ -535,3 +539,4 @@ font-weight: 700;
   position: relative;
   height:auto;
 }
+
