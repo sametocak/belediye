@@ -539,4 +539,13 @@ font-weight: 700;
   position: relative;
   height:auto;
 }
-
+.belediye-liste{
+  display: inline-block;
+  position: relative;
+}
+.belediye-liste-arama{
+  display: none;
+}
+.navbar-inverse{
+  display: none !important;
+}

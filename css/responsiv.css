@@ -7,6 +7,20 @@ Tarif: stül-ü sahih-i Stül-ü fasıktan ayırmak
 *******/
 
 
+@media (max-width: 1270px) {
+    #soldasabit{
+        display: none;
+    }
+#sagdasabit{
+    display: none;
+}
+    .belediyeler{
+        width: 100%;
+    }
+
+}
+
+
 @media (max-width: 760px) {
     .belediyeler{
         width: 100%;
@@ -46,9 +60,9 @@ Tarif: stül-ü sahih-i Stül-ü fasıktan ayırmak
     .soc{
         overflow:hidden;
         margin: 2px;
-        width: 130%;
+        width: 100%;
         margin-left: -55px;
-        margin-top: 7px;
+        margin-top: 14px;
         /* position: absolute; */
         float: left;
         list-style:none;
@@ -62,8 +76,28 @@ Tarif: stül-ü sahih-i Stül-ü fasıktan ayırmak
         width: 113%;
     }
     .belediye-aciklama{
-        text-align: center;
+        display: none;
     }
-
-
+    .belediye-liste{
+        display: none;
+    }
+    .belediye-liste-arama{
+        display: inline-block;
+        position: relative;
+    }
+    .navbar-inverse{
+        display: block !important;
+    }
+    .ust{
+        margin-top: -20px;
+    }
+    .sosyal-medya{
+        margin-top: -50px;
+    }
+    .ust{
+        display: none;
+    }
+    .logo{
+        margin-top: -50px;
+    }
 }
