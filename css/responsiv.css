@@ -84,6 +84,7 @@ Tarif: stül-ü sahih-i Stül-ü fasıktan ayırmak
     .belediye-liste-arama{
         display: inline-block;
         position: relative;
+
     }
     .navbar-inverse{
         display: block !important;
@@ -100,4 +101,5 @@ Tarif: stül-ü sahih-i Stül-ü fasıktan ayırmak
     .logo{
         margin-top: -50px;
     }
+
 }

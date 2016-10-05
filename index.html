@@ -44,7 +44,7 @@
           var belediyeler = angular.module("belediyeler",[]);
           belediyeler.controller("kontrol",function($scope,$http){
 
-              $http.get('belediyeler.json').success(function (response){
+              $http.get('js/belediyeler.json').then(function (response){
                   $scope.veriler = response.data;
               });
           });
@@ -346,22 +346,34 @@
               </div>
           </div>
               <div class="belediye-liste-arama">
-                  <div class="input-group"  ng-controller="kontrol">
+                  <div class="input-group">
 
-                      <input type="text" class="form-control" ng-model="arama" placeholder="Belediye ara...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Arama</button>
-      </span>
-                      <li ng-repeat="veri in veriler | filter:arama">{{veri.name}}</li>
+                      <input  type="text" class="form-control" style="width: 355px" ng-model="arama" placeholder="Belediye ara...">
+
+
+
                   </div>
+
+                  <table class="table"  ng-controller="kontrol">
+                      <thead>
+
+                      <tr>
+                          <td ng-repeat="veri in veriler | filter:arama"  style="margin-left: 0px">
+                              <a href="belediyeler.html"><button type="button" class="btn btn-sm btn-info" >{{veri.sehir}}</button></a></td>
+                      </tr>
+                      </tbody>
+                  </table>
+
+
+
 
               </div>
 <div class="belediye-liste" >
 
-          <div class="container">
+          <div class="container"  ng-controller="kontrol">
               <ul style="margin-left: -12px">
-                  <li style="padding:5px 3px 0 3px;margin-bottom: 4px;list-style: none;float: left">
-                      <a href="belediyeler.html"><button type="button" class="btn btn-sm btn-info"  >{{veri.name}}</button></a>
+                  <li style="padding:5px 3px 0 3px;margin-bottom: 4px;list-style: none;float: left" ng-repeat="veri in veriler | filter:arama">
+                      <a href="belediyeler.html"><button type="button" class="btn btn-sm btn-info"  >{{veri.sehir}}</button></a>
                   </li>
 
 
