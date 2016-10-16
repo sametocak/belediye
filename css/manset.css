@@ -1,0 +1,20 @@
+.MEFmanset{border:1px solid #dcdbdb;width:100%;height:460px;}
+.eleman{display:block!important;}
+.MEFmanset .manset_resimler img{border:none;text-decoration:none;width:100%;height:460px;}
+.MEFmanset .manset_resimler a,.MEFmanset .manset_butonlar a{text-decoration:none;color:#6f6f6f;display:block;font-size:11px; border: 1px solid #ccc;font-family: "Helvetica Neue";font-size: 16px;font-weight: bold}
+.MEFmanset .manset_butonlar a{display:block;text-align:center;cursor: pointer}
+.MEFmanset .manset_resimler a{padding:0;}
+.MEFmanset .manset_resimler,.MEFmanset .manset_butonlar{list-style:none;margin:0;padding:0;}
+.MEFmanset .manset_butonlar{border-top:1px solid #ccc;border-bottom:0;height:24px;}
+.MEFmanset .manset_resimler li,.MEFmanset .manset_butonlar li{list-style:none;background-color:#FFF;font-size:14px;font-family:oswald,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-align:center;margin:0;padding:0;}
+.MEFmanset .manset_resimler{width:100%;height:460px;}
+.MEFmanset .manset_resimler li{position:relative;width:100%;height:277px;display:none;}
+.MEFmanset .manset_resimler li img{width:100%;height:460px;}
+.MEFmanset .manset_butonlar li{float:left;width:29px;line-height:24px;height:24px;border-right:1px solid #ccc;background:linear-gradient(tobottom,#efeded0,#fff7f750%,#efeded100%);font-family:oswald,Arial,sans-serif;}
+.MEFmanset .manset_butonlar li.tumu{width:47px;height:24px;border-right:none;background-color:#f8f8f8;}
+.MEFmanset .manset_butonlar li.tumu a{color:#6F6F6F;}
+.MEFmanset .manset_butonlar li.tumu:hover{background:#fd0000!important;}
+.MEFmanset .manset_butonlar li.aktifbuton,.MEFmanset .manset_butonlar li:hover{background:#fd0000 no-repeat top center;color:#FFF!important;}
+.MEFmanset .manset_butonlar li.aktifbuton a,.MEFmanset .manset_butonlar li:hover a{color:#FFF;border:1px solid #900;border-top:0;}
+.MEFmanset span{width:100%;height:38px;background:url('../img/caption-bg.png') repeat scroll 0 0 transparent;display:block;text-shadow:1px 1px 0 #000;font-size:20px;color:#FFF;font-family:oswald,Arial,sans-serif;font-weight:400;overflow:hidden;top:423px;text-align:center;position:absolute;z-index:4;margin:0;padding:5px 0 0;}
+.MEFmanset span:hover{color:#CCC;background:url('../img/caption-bg.png') repeat scroll 0 0 transparent;}

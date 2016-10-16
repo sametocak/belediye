@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>iletişim</title>
+    <title>Yazar Sayfası</title>
 
     <!-- Bootstrap CSS -->
     <!-- Stil Dosyaları -->
@@ -122,6 +122,31 @@
 
         });
     </script>
+    <script language="javascript">
+
+        $(document).ready(function(){
+
+            var varsayilanFontBuyuklugu = $(".kurumsal-metin").css("font-size");
+
+            $(".sifirla").click(function(){
+                $(".kurumsal-metin").css({"font-size" : varsayilanFontBuyuklugu});
+            });
+
+            $(".buyult").click(function(){
+                var fontBuyukluguFloat = parseFloat($(".kurumsal-metin").css("font-size"));
+                var yeniFontBuyuklugu = fontBuyukluguFloat * 1.2;
+                if(yeniFontBuyuklugu < 50)
+                    $(".kurumsal-metin").css({"font-size" : yeniFontBuyuklugu});
+            });
+
+            $(".kucult").click(function(){
+                var fontBuyukluguFloat = parseFloat($(".kurumsal-metin").css("font-size"));
+                var yeniFontBuyuklugu = fontBuyukluguFloat * 0.8;
+                if(yeniFontBuyuklugu > 5)
+                    $(".kurumsal-metin").css({"font-size" : yeniFontBuyuklugu});
+            });
+        })
+    </script>
     <script type="text/javascript">
         //YATAY EN ALT SLİDER
         $(function(){
@@ -152,7 +177,6 @@
 <body>
 <!--- Header Alanı --->
 <div class="header">
-
 
 
     <nav class="navbar navbar-inverse navbar-default">
@@ -260,6 +284,7 @@
             </div>
         </div>
     </div>
+
     <!--- Üst Yazarlar --->
     <div class="container">
         <div class="row">
@@ -349,6 +374,7 @@
 
 
 
+
 </div>
 <!--- HEADER BİTTİ --->
 
@@ -358,64 +384,353 @@
     <div class="ilce-alani">
 
         <div class="row">
-            <div class="col-md-12">
-                <h3 class="iletisim-baslik">İLETİŞİM & ADRESLER</h3>
+            <div class="col-md-8">
+                <div class="kurumsal-yazi-alani">
+                    <h3 class="kurumsal-baslik">Samet OCAK - Yazar</h3>
+                    <div class="well-sm" style="background: #eaeaea;">
+                        <div class="container">
+                            <div class="row">
+                        <div class="col-md-5">Bu yazıyı 56 kişi tarafından okundu | 37 Yorum yapıldı  </div>
+                        <div class="col-md-4">
+
+                            <button type="button" class="kucult">A-</button>
+                            <button type="button" class="sifirla">Sıfırla</button>
+                            <button type="button" class="buyult">A+</button>
+                           &nbsp;&nbsp;<a href="#" onclick="window.print();"><i class="fa fa-print"></i></a></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="sosyal-medya">
+                        <ul class="tarih-saat">
+                            <li><span class="glyphicon glyphicon-equalizer"></span> Kategori: <b>SAMSUN</b></li>
+                            <li><span class="glyphicon glyphicon-bookmark"></span> Kaynak: <b>Ajans</b></li>
+                            <li><span class="glyphicon glyphicon-time"></span> Güncelleme: <b>15 Ekim 2016</b></li>
+
+
+                        </ul>
+
+                    </div>
+
+                    <hr>
+                    <img  class="resim-sol" src="slider/sl1.jpg" alt="">
+
+                    <div class="kurumsal-metin">
+                        "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
+                        <br> "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
+                    </div>
+                    <div class="well" >
+                        <i class="glyphicon glyphicon-tags"></i>&nbsp; <b>Etiketler:</b><div style="text-align: justify;word-wrap: break-word;">  <span>Haber,Haberler,sporHaber,Haberler</span></div>
+                        <hr>
+                        <div class="row" style="text-align: center">
+                            <div class="col-sm-6"> <button class="btn btn-danger"><< Önceki Haber</button></div>
+                            <div class="col-sm-6"><button class="btn btn-default">Sonraki Haber >></button></div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <br>
+                <div class="addthis_inline_share_toolbox"></div>
                 <hr>
-                <div class="map">
-                    <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Kuningan,+Jakarta+Capital+Region,+Indonesia&amp;aq=3&amp;oq=kuningan+&amp;sll=37.0625,-95.677068&amp;sspn=37.410045,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Kuningan&amp;t=m&amp;z=14&amp;ll=-6.238824,106.830177&amp;output=embed">
-                    </iframe>
+
+
+                <div class="well">
+                    <h4 class="kirmizi-baslik">YORUM YAZ</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gönder</button>
+                    </form>
                 </div>
 
+                <hr>
 
-                <div class="iletisim-alani">
-                    <div class="col-md-8">
-                        <form class="form-horizontal" role="form">
-                            <div class="form-group">
 
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputEmail3" placeholder="İsim-Soyisim">
-                                </div>
-                            </div>
-                            <div class="form-group">
-
-                                <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputPassword3" placeholder="E-posta adresi">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-
-                                <div class="col-sm-10">
-                                    <textarea class="form-control" rows="8" placeholder="Mesajınız..."></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-7 col-sm-10">
-                                    <button type="submit" class="btn btn-success">Gönder</button>
-                                </div>
-                            </div>
-                        </form>
+                <!-- yorum -->
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="img/yazar.jpg" width="64" height="64" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><b>Emre Başocak</b>
+                            <small>August 25, 2014 at 9:30 PM</small>
+                        </h4>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                     </div>
-                    <div class="col-md-4">
-                        <h3 class="panel-heading">
-                            Adresler
-                        </h3>
-                        <p>Emirefendi Mahallesi 2345 sok no:/bb bafra/SAMSUN</p><br>
-                        <p><i class="fa fa-phone"></i> &nbsp; Tel: 4567890</p>
-                        <p><i class="fa fa-fax"></i> &nbsp; fax: 4567890</p>
-                        <p><i class="fa fa-mail-forward"></i> &nbsp; samet@samet.com</p>
-
-                    </div>
-
                 </div>
-
-
+                <hr>
+                <!-- Comment -->
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="img/yazar.jpg" width="64" height="64" alt="">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><b>Ahmet Yalmancı</b>
+                            <small>August 25, 2014 at 9:30 PM</small>
+                        </h4>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <!-- Nested Comment --><hr>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="img/yazar.jpg" width="64" height="64" alt="">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><b>Samet Ocak</b>
+                                    <small>August 25, 2014 at 9:30 PM</small>
+                                </h4>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                        </div>
+                        <!-- End Nested Comment -->
+                    </div>
+                </div>
 
 
 
             </div>
 
 
+            <div class="col-sm-4">
+                <div class="sidebar">
+
+                    <div class="sidebar-reklam">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">
+                                <i class="fa fa-adjust"></i>&nbsp;&nbsp; REKLAM ALANI
+                            </a>
+                            <img class="img-responsive"  src="slider/reklam-yan.png" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="son-haberler">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">
+                                <i class="fa fa-newspaper-o"></i>
+                                SON HABERLER
+                            </a>
+                            <ul style="overflow-y: scroll;height: 425px">
+
+                                <div class="media list-group-item">
+                                    <a class="media-left" href="#">
+                                        <img src="img/alt-ek.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Haberler 1</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        </p>
+                                        <div class="ficon">
+                                            <a href="" alt="">Devamı >></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="media list-group-item">
+                                    <a class="media-left" href="#">
+                                        <img src="img/alt-ek.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Haberler 1</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        </p>
+                                        <div class="ficon">
+                                            <a href="" alt="">Devamı >></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="media list-group-item">
+                                    <a class="media-left" href="#">
+                                        <img src="img/alt-ek.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Haberler 1</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        </p>
+                                        <div class="ficon">
+                                            <a href="" alt="">Devamı >></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="media list-group-item">
+                                    <a class="media-left" href="#">
+                                        <img src="img/alt-ek.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Haberler 1</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        </p>
+                                        <div class="ficon">
+                                            <a href="" alt="">Devamı >></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="media list-group-item">
+                                    <a class="media-left" href="#">
+                                        <img src="img/alt-ek.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Haberler 1</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        </p>
+                                        <div class="ficon">
+                                            <a href="" alt="">Devamı >></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="media list-group-item">
+                                    <a class="media-left" href="#">
+                                        <img src="img/alt-ek.png" alt="">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Haberler 1</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        </p>
+                                        <div class="ficon">
+                                            <a href="" alt="">Devamı >></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="kose-yazar">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">
+                                <i class="fa fa-user"></i>
+                                KÖŞE YAZARLARI
+                            </a>
+                            <ul style="overflow-y: scroll;height: 455px">
+                                <li>
+                                    <a href="#" class="list-group-item">
+                                        <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
+                                        <h4 class="list-group-item-heading yazar-baslik"> A.Samet OCAK <br>Gazeteci Yazar </h4>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="list-group-item">
+                                        <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
+                                        <h4 class="list-group-item-heading yazar-baslik"> A.Samet OCAK <br>Gazeteci Yazar </h4>
+                                    </a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="#" class="list-group-item">
+                                        <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
+                                        <h4 class="list-group-item-heading yazar-baslik"> A.Samet OCAK <br>Gazeteci Yazar </h4>
+                                    </a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="#" class="list-group-item">
+                                        <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
+                                        <h4 class="list-group-item-heading yazar-baslik"> A.Samet OCAK <br>Gazeteci Yazar </h4>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="list-group-item">
+                                        <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
+                                        <h4 class="list-group-item-heading yazar-baslik"> A.Samet OCAK <br>Gazeteci Yazar </h4>
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="#" class="list-group-item">
+                                        <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
+                                        <h4 class="list-group-item-heading yazar-baslik"> A.Samet OCAK <br>Gazeteci Yazar </h4>
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="#" class="list-group-item">
+                                        <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
+                                        <h4 class="list-group-item-heading yazar-baslik"> A.Samet OCAK <br>Gazeteci Yazar </h4>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="list-group-item">
+                                        <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
+                                        <h4 class="list-group-item-heading yazar-baslik"> A.Samet OCAK <br>Gazeteci Yazar </h4>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="list-group-item">
+                                        <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
+                                        <h4 class="list-group-item-heading yazar-baslik"> A.Samet OCAK <br>Gazeteci Yazar </h4>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="list-group-item">
+                                        <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
+                                        <h4 class="list-group-item-heading yazar-baslik"> A.Samet OCAK <br>Gazeteci Yazar </h4>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="list-group-item">
+                                        <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
+                                        <h4 class="list-group-item-heading yazar-baslik"> A.Samet OCAK <br>Gazeteci Yazar </h4>
+                                    </a>
+                                </li>
+
+
+
+
+
+                            </ul>
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="hava-durumu">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">
+                                <i class="fa fa-cloud"></i>&nbsp;&nbsp; HAVA DURUMU
+                            </a>
+                            <img class="img-responsive" src="img/hava.png" alt="">
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
         </div>
 
 

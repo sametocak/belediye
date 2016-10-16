@@ -101,5 +101,47 @@ Tarif: stül-ü sahih-i Stül-ü fasıktan ayırmak
     .logo{
         margin-top: -50px;
     }
+    .gl-but{
+        margin-left: 237px;
+        margin-top: -34px;
+    }
+
+    #rehber ul li {
+
+        width: 350px;
+
+    }
+    #rehber ul li img{
+
+        width: 100%;
+
+    }
+    .sidebar{
+        display: none;
+    }
+    .haber-slider-kucuk{
+        display: none;
+    }
+    .resim-sol{
+        margin-top:25px;
+         text-align: center;
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 300px;
+        padding-right: 5px;
+        padding-left: 15px;
+    }
+    .MEFmanset{
+      width: 100%;
+        height: auto !important;
+    }
+    .MEFmanset .manset_resimler{width:100%;height:auto;}
+    .MEFmanset .manset_resimler img{border:none;text-decoration:none;width:100%;height:auto;}
+
+    .MEFmanset .manset_resimler li{position:relative;width:100%;height:auto;display:none;}
+    .MEFmanset .manset_resimler li img{width:100%;height:auto;}
+
+
 
 }

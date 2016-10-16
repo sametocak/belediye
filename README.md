@@ -1,5 +1,6 @@
 <h2>Son Değişiklikler</h2>
 <span>
+SON HALİ 17Ekim 16 - 01:23
 * Angularjs Belediyeler
 * Responsive ayarları
 * Jquery ayarları

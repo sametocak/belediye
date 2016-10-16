@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Kurumsal Sayfalar</title>
+    <title>Belediye Sayfası</title>
 
     <!-- Bootstrap CSS -->
     <!-- Stil Dosyaları -->
@@ -17,7 +17,7 @@
     <link href="css/responsiv.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
+
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/styles.css">
 
@@ -29,7 +29,7 @@
     <!-- JS dosyaları -->
     <script type="text/javascript" src="js/jquery.js"></script>
 
-    <script type="text/javascript" src="js/owl.carousel.js"></script>
+
     <script type="text/javascript" src="js/pSlider.min.js"></script>
     <script src="js/isotope.min.js"></script>
     <script src="js/jquery.fancybox.pack.js"></script>
@@ -48,6 +48,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="js/jssor.slider-21.1.6.min.js" type="text/javascript"></script>
     <script>
         var belediyeler = angular.module("belediyeler",[]);
         belediyeler.controller("kontrol",function($scope,$http){
@@ -93,6 +94,7 @@
                 extra: 5, // extra margin değeri 5px
                 visible: 3,
                 loop: true,
+                auto:true,
 
                 skip: 3
             });
@@ -141,17 +143,69 @@
             });
 
         });
+
+
+
+
+
+
     </script>
     <script>
-        $( function() {
-            $( "#tabs" ).tabs();
-        } );
+        jQuery(document).ready(function ($) {
+
+
+            setInterval(function () {
+                moveRight();
+            }, 3000);
+
+
+            var slideCount = $('#rehber ul li').length;
+            var slideWidth = $('#rehber ul li').width();
+            var slideHeight = $('#rehber ul li').height();
+            var sliderUlWidth = slideCount * slideWidth;
+
+            $('#rehber').css({ width: slideWidth, height: slideHeight });
+
+            $('#rehber ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+            $('#rehber ul li:last-child').prependTo('#rehber ul');
+
+            function moveLeft() {
+                $('#rehber ul').animate({
+                    left: + slideWidth
+                }, 200, function () {
+                    $('#rehber ul li:last-child').prependTo('#rehber ul');
+                    $('#rehber ul').css('left', '');
+                });
+            };
+
+            function moveRight() {
+                $('#rehber ul').animate({
+                    left: - slideWidth
+                }, 200, function () {
+                    $('#rehber ul li:first-child').appendTo('#rehber ul');
+                    $('#rehber ul').css('left', '');
+                });
+            };
+
+            $('a.control_prev').click(function () {
+                moveLeft();
+            });
+
+            $('a.control_next').click(function () {
+                moveRight();
+            });
+
+        });
     </script>
+
+
 </head>
 
 <body>
 <!--- Header Alanı --->
 <div class="header">
+
 
 
     <nav class="navbar navbar-inverse navbar-default">
@@ -351,7 +405,15 @@
 
 
 </div>
+
+
 <!--- HEADER BİTTİ --->
+
+<div class="container">
+    <div style="background: url('img/bafra.jpg') no-repeat; width: 100%;background-position: center; background-size: cover">
+        <img class="img-responsive img-center " src="img/bafra-logo.png" alt="">
+    </div>
+</div>
 
 
 
@@ -361,109 +423,357 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="kurumsal-yazi-alani">
-                    <h3 class="kurumsal-baslik">1914 tarihli H. Rackham Çevirisi</h3>
-                    <br>
-                    <div class="sosyal-medya">
-                        <ul class="tarih-saat">
-                            <li>Kategori: <b>SAMSUN</b></li>
-                            <li>Kaynak: <b>Ajans</b></li>
-                            <li>Güncelleme: <b>15 Ekim 2016</b></li>
+                    <h3 class="kurumsal-baslik">Bafra Belediyesi - <span>Profil Sayfası</span></h3>
+                    <hr>
 
 
-                        </ul>
 
+                    <div class="col-md-12" style="margin-bottom: 20px">
+
+                        <img class="img-responsive" src="img/profil.jpg" alt="">
+                        <hr>
                     </div>
 
-                    <hr>
-                    <img  class="img-responsive" src="slider/sl1.jpg" alt="">
-                    <br>
-                    <div class="addthis_inline_share_toolbox"></div>
-                    <hr>
-                    <div class="kurumsal-metin">
-                        "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-                        <br> "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-                        </div>
-                </div>
-                <br>
-                <i class="glyphicon glyphicon-tags"></i>&nbsp; <b>Etiketler:</b> <div style="text-align: justify;word-wrap: break-word;">  <span>Haber,Haberler,spor,bafra,haberler,belediye</span></div>
-
-                <hr>
-
-                <div class="well">
-                    <h4 class="kirmizi-baslik">YORUM YAZ</h4>
-                    <form role="form">
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Gönder</button>
-                    </form>
-                </div>
-
-                <hr>
 
 
-                <!-- yorum -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="img/yazar.jpg" width="64" height="64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading"><b>Emre Başocak</b>
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
-                </div>
-                <hr>
-                <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="img/yazar.jpg" width="64" height="64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading"><b>Ahmet Yalmancı</b>
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        <!-- Nested Comment --><hr>
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="img/yazar.jpg" width="64" height="64" alt="">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading"><b>Samet Ocak</b>
-                                    <small>August 25, 2014 at 9:30 PM</small>
-                                </h4>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+
+                    <div class="row carousel-holder">
+
+                        <div class="col-md-12">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img class="slide-image" src="slider/sld2.jpg" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="slider/sld1.jpg" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="slider/sld3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
                             </div>
                         </div>
-                        <!-- End Nested Comment -->
+
+                    </div>
+
+
+
+
+                    <br>
+                    <h3 class="kurumsal-baslik"> <span>İlçe Haberleri</span></h3>
+                    <div class="row">
+
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <a href="haber.html"><img src="http://placehold.it/320x150" alt=""></a>
+                                <div class="caption">
+
+                                    <h4><a href="haber.html"><b>Haber Adı</b></a>
+                                    </h4>
+                                    <p>Kısa açıklama</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#">«</a>
+                            </li>
+                            <li class="active">
+                                <a href="#">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                            <li>
+                                <a href="#">»</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
 
-            </div>
+
+                </div>
+
+
 
 
             <div class="col-sm-4">
+
+
                 <div class="sidebar">
+
 
                     <div class="sidebar-reklam">
                         <div class="list-group">
-                            <a href="#" class="list-group-item active">
-                                <i class="fa fa-adjust"></i>&nbsp;&nbsp; REKLAM ALANI
+                            <a href="#" class="list-group-item active" style="background: #55c9ea !important;margin-bottom: 5px">
+                                <i class="fa fa-user"></i>&nbsp;&nbsp; BELEDİYE BAŞKANI
                             </a>
-                            <img class="img-responsive"  src="slider/reklam-yan.png" alt="">
+
+
+                            <div class="col-md-12 yazi-orta">
+                                <img class="img-circle img-responsive resim-orta" src="img/bafra-logo.png" alt="">
+                                <h3>Başkan Adı<br>
+                                    <small>Belediye Başkanı</small>
+                                </h3>
+                                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                            </div>
+
+
+
                         </div>
                     </div>
 
 
                     <div class="son-haberler">
                         <div class="list-group">
-                            <a href="#" class="list-group-item active">
-                                <i class="fa fa-newspaper-o"></i>
-                                SON HABERLER
+                            <a href="#" class="list-group-item active" style="background: #55c9ea !important;">
+                                <i class="fa fa-newspaper-o"></i>&nbsp;&nbsp; belediyeye aitDUYURULAR
                             </a>
+
                             <ul style="overflow-y: scroll;height: 425px">
 
                                 <div class="media list-group-item">
@@ -568,13 +878,24 @@
 
 
 
+                    <div class="sidebar-reklam">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">
+                                <i class="fa fa-adjust"></i>&nbsp;&nbsp; REKLAM ALANI
+                            </a>
+                            <img class="img-responsive"  src="slider/reklam-yan.png" alt="">
+                        </div>
+                    </div>
+
+
+
                     <div class="kose-yazar">
                         <div class="list-group">
                             <a href="#" class="list-group-item active">
                                 <i class="fa fa-user"></i>
-                                KÖŞE YAZARLARI
+                                belediyeye aitKÖŞE YAZARLARI
                             </a>
-                            <ul style="overflow-y: scroll;height: 455px">
+                            <ul style="overflow-y: scroll;height: 280px">
                                 <li>
                                     <a href="#" class="list-group-item">
                                         <img class="img-circle" src="slider/sl1.jpg" width="60" height="60">
@@ -669,10 +990,32 @@
                         </div>
 
                     </div>
+
+
+                    <div class="sidebar-reklam">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">
+                                <i class="fa fa-adjust"></i>&nbsp;&nbsp; REHBER GALERİ
+                            </a>
+                            <div id="rehber">
+
+                                <ul>
+
+                                    <li><img class="img-responsive" src="img/yazar.jpg" alt=""></li>
+                                    <li><img class="img-responsive" src="img/yazar.jpg" alt=""></li>
+                                    <li><img class="img-responsive" src="img/yazar.jpg" alt=""></li>
+                                    <li><img class="img-responsive" src="img/yazar.jpg" alt=""></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="hava-durumu">
                         <div class="list-group">
                             <a href="#" class="list-group-item active">
-                                <i class="fa fa-cloud"></i>&nbsp;&nbsp; HAVA DURUMU
+                                <i class="fa fa-cloud"></i>&nbsp;&nbsp; ilçeye ait HAVA DURUMU
                             </a>
                             <img class="img-responsive" src="img/hava.png" alt="">
                         </div>
@@ -681,12 +1024,90 @@
 
 
 
-
                 </div>
             </div>
         </div>
 
+        <div class="well-sm">
+            <h3 class="baslik2"> <span>Benzer Haber</span></h3>
+        </div>
+        <!--- KÜÇÜK Slider Başladı --->
+        <div class="container">
+            <div class="slider-ince visible2" id="slider2">
+                <div class="visible-inner">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img class="img-responsive" src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="img-responsive" src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="img-responsive" src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="slider/sl1.jpg" alt=""/>
+                            </a>
+                        </li>
 
+                    </ul>
+                </div>
+                <a class="prev" href="#"><i class="fa fa-angle-left"></i></a>
+                <a class="next" href="#"><i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
 
     </div>
 
@@ -846,10 +1267,6 @@
 
     </div>
 </div>
-
-
-
-
 
 
 <!--  FOOTER JS LER -->
