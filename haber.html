@@ -171,9 +171,9 @@
         });
     </script>
     <script>
-        $( function() {
-            $( "#tabs" ).tabs();
-        } );
+        $('#myCollapsible').on('hidden.bs.collapse', function () {
+            // do something…
+        })
     </script>
 </head>
 
@@ -392,7 +392,7 @@
 
             <div class="container">
 <div style="text-align: center;margin: 5px">
-                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#belediyeler" style="background: #94a3c2 !important;">BELEDİYELERİ GÖR</button>
+                <button type="button" class="button" data-toggle="collapse" data-target="#belediyeler"><span>Belediyeler</span></button>
 </div>
                 <div id="belediyeler" class="collapse">
                     <ul style="padding: 2px">
@@ -481,7 +481,7 @@
 <div class="haber-slider-kucuk">
 <div class="container">
     <div class="slider-ince visible2" id="slider2">
-        <div class="visible-inner">
+        <div class="visible-inner2">
             <ul>
                 <li>
                     <a href="#">

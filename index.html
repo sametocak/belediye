@@ -57,6 +57,7 @@
       <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
       <link rel="stylesheet" type="text/css" href="css/custom.css" />
       <script src="js/modernizr.custom.17475.js"></script>
+      <script src="js/jquery.carouFredSel-6.1.0-packed.js" type="text/javascript"></script>
 
 
       <script>
@@ -129,6 +130,91 @@
 
 
       </script>
+
+
+      <script type="text/javascript">
+          $(function() {
+              var $carousel = $('#carousel-ilce'),
+                      $pager = $('#pager-ilce');
+
+              //	gather the thumbnails
+              var $thumb = $( '<div class="thumb" />' );
+              $carousel.children().each(function() {
+                  var src = $(this).attr( 'src' );
+                  $thumb.append( '<img src="' + src.split('img/large/').join('img/small/') + '" />' );
+              });
+
+              //	duplicate the thumbnails
+              for (var a = 0; a < $carousel.children().length - 1; a++) {
+                  $pager.append( $thumb.clone() );
+              }
+
+              //	create large carousel
+              $carousel.carouFredSel({
+                  items: {
+                      visible: 1,
+                      width: 550,
+                      height: 310
+                  },
+                  scroll: {
+                      fx: 'directscroll',
+                      onBefore: function( data ) {
+                          var oldSrc = data.items.old.attr('src').split('img/large/').join('img/small/'),
+                                  newSrc = data.items.visible.attr('src').split('img/large/').join('img/small/'),
+                                  $t = $thumbs.find('img:first-child[src="' + newSrc + '"]').parent();
+
+                          $t.trigger('slideTo', [$('img[src="' + oldSrc + '"]', $t), 'next']);
+                      }
+                  }
+              });
+
+              //	create thumb carousels
+              var $thumbs = $('.thumb');
+              $thumbs.each(function( i ) {
+                  $(this).carouFredSel({
+                      auto: false,
+                      scroll: {
+                          fx: 'directscroll'
+                      },
+                      items: {
+                          start: i+1,
+                          visible: 1,
+                          width: 100,
+                          height: 80
+                      }
+                  });
+
+                  //	click the carousel
+                  $(this).click(function() {
+                      var src = $(this).children().first().attr('src').split('img/small/').join('img/large/');
+                      $carousel.trigger('slideTo', [$('img[src="' + src + '"]', $carousel), 'next']);
+                  });
+              });
+          });
+      </script>
+
+
+
+      <script type="text/javascript">
+          // SON DAKİKA SLİDER
+          $(function() {
+
+              $('#carousel-son').carouFredSel({
+                  width: 900,
+                  items: 4,
+                  scroll: 1,
+                  auto: {
+                      duration: 1250,
+                      timeoutDuration: 2500
+                  },
+                  prev: '#prev',
+                  next: '#next',
+                  pagination: '#pager'
+              });
+
+          });
+      </script>
+
       <script type="text/javascript">
           //YATAY EN ALT SLİDER
           $(function(){
@@ -145,7 +231,7 @@
                   time: 2700,
 
                   width: 848,
-                  height:400
+                  height:270
               });
 
           });
@@ -168,6 +254,12 @@
                   height:60
               });
 
+          });
+      </script>
+
+      <script>
+          $( document.body ).click(function() {
+             alert('asas')
           });
       </script>
 
@@ -398,7 +490,7 @@
                   <div class="container"  ng-controller="kontrol">
                       <ul style="margin-left: -12px">
                           <li style="padding:5px 3px 0 3px;margin-bottom: 4px;list-style: none;float: left" ng-repeat="veri in veriler | filter:arama">
-                              <a href="belediyeler.html"><button type="button" class="btn btn-sm btn-info"  >{{veri.sehir}}</button></a>
+                               <button type="button" class="btn btn-sm btn-info"  >{{veri.sehir}}</button>
                           </li>
                       </ul>
                   </div>
@@ -471,11 +563,7 @@
 
 
 
-          <li class="">
-              <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
-                  <img class="img-responsive" src="slider/s8.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
-              <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
-          </li>
+
 
       </ul>
       <ul class="manset_butonlar">
@@ -486,32 +574,35 @@
           <li class=""><a href="#" title="NTV'yi sarsan tek cümlelik istifa" target="_blank">5</a></li>
           <li class=""><a href="#" title="Öğretmen ve polislerin maaşı artıyor!" target="_blank">6</a></li>
           <li class=""><a href="#" title="17 Aralık iddalarıyla ilgili konuştu: Hesap için şartı var" target="_blank">7</a></li>
-          <li class="aktifbuton"><a href="#" title="Rehinelerin kurtarılmasında o isme özel teşekkür" target="_blank">8</a></li>
 
       </ul>
   </div>
 
 </div>
   <hr>
+  <h3 class="baslik2 text-center"> <span>SON DAKİKA</span></h3>
   <!--- KÜÇÜK Slider Başladı --->
 <div class="container" >
-<div class="elastislide-wrapper">
-  <ul id="carousel" class="elastislide-list">
-
-      <li><a href="#"><img src="img/slide1.png" alt="image01" width="360" /></a></li>
-
-      <li><a href="#"><img src="img/slide1.png" alt="image01" width="360" /></a></li>
-      <li><a href="#"><img src="img/666.jpg" alt="image01" width="360" /></a></li>
-      <li><a href="#"><img src="img/555.jpg" alt="image01" width="360" /></a></li>
-      <li><a href="#"><img src="img/yazar.jpg" alt="image01" width="360" /></a></li>
 
 
+    <div id="son-dakika">
+        <div id="carousel-son">
+             <img class="img-responsive" src="img/up1.jpg" />
+            <img class="img-responsive" src="img/up2.jpg" />
+            <img class="img-responsive" src="img/up3.jpg" />
+            <img class="img-responsive" src="img/up4.jpg" />
+            <img class="img-responsive" src="img/up5.jpg" />
+            <img class="img-responsive" src="img/up6.jpg" />
+        </div>
+        <a id="prev" href="#"></a>
+        <a id="next" href="#"></a>
+        <div id="pager"></div>
+    </div>
 
 
-  </ul>
 
 </div>
-</div>
+
 
 
 
@@ -533,7 +624,25 @@
                       <div class="col-md-8">
                             <div class="ilce-slider">
 
-                          <div class="slider" id="slider3">
+
+                                <div id="ilceler">
+                                    <div id="inner">
+                                        <div id="carousel-ilce">
+
+                                            <img class="img-responsive"  src="img/large/rat.jpg" width="550" height="310" />
+                                            <img class="img-responsive"  src="img/large/toystory.jpg" width="550" height="310" />
+                                            <img class="img-responsive"  src="img/large/up.jpg" width="550" height="310" />
+                                            <img class="img-responsive"  src="img/large/walle.jpg" width="550" height="310" />
+                                            <img class="img-responsive"  src="img/large/bugs.jpg" width="550" height="310" />
+
+                                        </div>
+                                        <div id="pager-ilce"></div>
+                                    </div>
+                                </div>
+
+
+
+                         <!---- <div class="slider" id="slider3">
                               <ul>
                                   <li>
                                       <a href="#">
@@ -557,7 +666,7 @@
                               </ul>
 
                               <div class="pagination"></div>
-                          </div>
+                          </div> ----->
 
                       </div>
                           <div class="reklam-775"><img class="img-responsive" src="slider/reklam-ust.png" ></div>
