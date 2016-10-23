@@ -914,3 +914,208 @@ margin-bottom: 40px;
   background-color: #600;
   cursor: default;
 }
+
+
+
+
+
+
+
+#wrapper4 {
+  width: 600px;
+  height: 400px;
+
+  overflow: hidden;
+  position: relative;
+
+}
+
+#carousel4 {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#carousel4 img {
+  display: block;
+  float: left;
+}
+#thumbnails4 {
+  width: 600px;
+  height: 120px;
+  overflow: hidden;
+  position: absolute;
+  top: 375px;
+  left: 0;
+  z-index: 2;
+}
+#thumbnails4 img {
+  display: block;
+  float: left;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+
+  box-shadow: 0 0 10px #000;
+}
+#thumbnails4 img:hover {
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+}
+
+
+/* haber sayfası hover**/
+
+#wrapper5 {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  margin-left: 50px;
+
+}
+#wrapper5 * {
+  color: #ffffff;
+}
+
+#wrapper5 .carousel5 {
+  display: block;
+  float: left;
+  width: 275px;
+  height: 250px;
+  margin: 0 1px 1px 0;
+}
+#wrapper5 .carousel5 img {
+  display: block;
+}
+#wrapper5 .carousel5 div {
+  background-color: rgba(0, 0, 0, 0.86);
+  width: 100%;
+  height: 250px;
+  padding: 0 30px;
+}
+#wrapper5 .carousel5 div h3 {
+  font-size: 20px;
+  line-height: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+#wrapper5 .carousel5 div p {
+  height: 160px;
+  margin: 0;
+}
+
+
+
+/** KURUMSAL GALERİ**/
+
+#wrapper6 {
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  margin-left: 10%;
+
+}
+#carousel-wrapper6 {
+  padding-bottom: 10px;
+  position: relative;
+}
+#carousel6, #thumbs6 {
+  overflow: hidden;
+}
+#carousel-wrapper6 .caroufredsel_wrapper6 {
+  border-radius: 10px;
+  box-shadow: 0 0 5px #899;
+}
+
+#carousel6 span, #carousel6 img,
+#thumbs6 a, #thumbs6 img  {
+  display: block;
+  float: left;
+}
+#carousel6 span, #carousel6 a,
+#thumbs6 span, #thumbs6 a {
+  position: relative;
+}
+#carousel6 img,
+#thumbs6 img {
+  border: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#carousel6 img.glare,
+#thumbs6 img.glare {
+  width: 102%;
+  height: auto;
+}
+
+#carousel6 span {
+  width: 554px;
+  height: 313px;
+}
+
+#thumbs-wrapper6 {
+  padding: 20px 40px;
+  position: relative;
+}
+#thumbs6 a {
+  border: 2px solid #899;
+  width: 150px;
+  height: 100px;
+  margin: 0 10px;
+  overflow: hidden;
+  border-radius: 10px;
+
+  -webkit-transition: border-color .5s;
+  -moz-transition: border-color .5s;
+  -ms-transition: border-color .5s;
+  transition: border-color .5s;
+}
+#thumbs6 a:hover, #thumbs6 a.selected {
+  border-color: #566;
+}
+
+#wrapper6 img#shadow {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+#prev6, #next6 {
+  background: transparent url('../img/gui/carousel_nav.png') no-repeat 0 0;
+  display: block;
+  width: 19px;
+  height: 20px;
+  margin-top: -10px;
+  position: relative;
+  top: 50%;
+}
+#prev6 {
+  background-position: 0 0;
+  left: -14px !important;
+  top: -40px !important;
+}
+#next6 {
+  background-position: -19px 0;
+  margin-left: 710px !important;
+  top: -50px !important;
+}
+#prev6:hover {
+  background-position: 0 -20px;
+}
+#next6:hover {
+  background-position: -19px -20px;
+}
+#prev6.disabled, #next6.disabled {
+  display: none  ;
+}
+
+
+

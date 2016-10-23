@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/manset.css">
 
+
     <!-- başkan altındaki kayan yazı -->
     <link href="css/maink.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -40,7 +41,8 @@
     <script src="js/jquery.fancybox.pack.js"></script>
     <script src="js/main.js"></script>
     <script src="js/manset.js"></script>
-    <script src="js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+    <script src="js/jquery.carouFredSel-6.1.0-packed.js" type="text/javascript"></script>
+    <script src="js/jsler.js" type="text/javascript"></script>
 
 
     <!-- SOSYAL MEDYA -->
@@ -56,7 +58,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="js/jssor.slider-21.1.6.min.js" type="text/javascript"></script>
+
     <script>
         var belediyeler = angular.module("belediyeler",[]);
         belediyeler.controller("kontrol",function($scope,$http){
@@ -73,67 +75,7 @@
     </script>
 
 
-    <script type="text/javascript">
-        $(function(){
 
-            $('#slider1').pSlider({
-                slider: $('#slider1 ul li'),
-                button: {
-                    next: $('#slider1 .next'),
-                    prev: $('#slider1 .prev')
-                },
-                pagination: $('#slider1 .pagination'),
-                loop: true,
-                auto: true,
-                time: 2000,
-                width: 1170,
-                skip: 1
-            });
-
-        });
-        //YATAY İNCE UZUN SLİDER
-        $(function(){
-
-            $('#slider2').pSlider({
-                slider: $('#slider2 ul li'),
-                button: {
-                    next: $('#slider2 .next'),
-                    prev: $('#slider2 .prev')
-                },
-                width: 340,
-                extra: 5, // extra margin değeri 5px
-                visible: 3,
-                loop: true,
-                auto:true,
-
-                skip: 3
-            });
-
-        });
-
-
-    </script>
-    <script type="text/javascript">
-        //YATAY EN ALT SLİDER
-        $(function(){
-
-            $('#slider3').pSlider({
-                slider: $('#slider3 ul li'),
-                button: {
-                    next: $('#slider3 .next'),
-                    prev: $('#slider3 .prev')
-                },
-                pagination: $('#slider3 .pagination'),
-                loop: true,
-                auto: true,
-                time: 2700,
-
-                width: 848,
-                height:400
-            });
-
-        });
-    </script>
     <script type="text/javascript">
         //YATAY EN ALT SLİDER
         $(function(){
@@ -154,149 +96,8 @@
 
         });
 
-
-
-
-
-
     </script>
-    <script>
-        jQuery(document).ready(function ($) {
 
-
-            setInterval(function () {
-                moveRight();
-            }, 3000);
-
-
-            var slideCount = $('#rehber ul li').length;
-            var slideWidth = $('#rehber ul li').width();
-            var slideHeight = $('#rehber ul li').height();
-            var sliderUlWidth = slideCount * slideWidth;
-
-            $('#rehber').css({ width: slideWidth, height: slideHeight });
-
-            $('#rehber ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-
-            $('#rehber ul li:last-child').prependTo('#rehber ul');
-
-            function moveLeft() {
-                $('#rehber ul').animate({
-                    left: + slideWidth
-                }, 200, function () {
-                    $('#rehber ul li:last-child').prependTo('#rehber ul');
-                    $('#rehber ul').css('left', '');
-                });
-            };
-
-            function moveRight() {
-                $('#rehber ul').animate({
-                    left: - slideWidth
-                }, 200, function () {
-                    $('#rehber ul li:first-child').appendTo('#rehber ul');
-                    $('#rehber ul').css('left', '');
-                });
-            };
-
-            $('a.control_prev').click(function () {
-                moveLeft();
-            });
-
-            $('a.control_next').click(function () {
-                moveRight();
-            });
-
-        });
-    </script>
-    <script type="text/javascript">
-        $(function() {
-            $('#carousel').carouFredSel({
-                direction: 'down',
-                width: 300,
-                height: 350,
-                align: false,
-                padding: [0, 0, 350, 0],
-                items: {
-                    width: 500,
-                    height: 30,
-                    visible: 5,
-                    minimum: 1
-                },
-                scroll: {
-                    items: 1,
-                    duration: 1000,
-                    onBefore: function( data ) {
-                        $('span', this).removeClass('selected');
-                        data.items.visible.last().find('span').addClass('selected');
-                    }
-                }
-            });
-            $('#carousel').children().click(function() {
-                $('#carousel').trigger( 'slideTo', [this, -4, 'prev'] );
-            });
-        });
-
-
-
-
-        $(function() {
-            $('#carousel2').carouFredSel({
-                direction: 'down',
-                width: 300,
-                height: 350,
-                align: false,
-                padding: [0, 0, 350, 0],
-                items: {
-                    width: 500,
-                    height: 30,
-                    visible: 5,
-                    minimum: 1
-                },
-                scroll: {
-                    items: 1,
-                    duration: 3000,
-                    onBefore: function( data ) {
-                        $('span', this).removeClass('selected');
-                        data.items.visible.last().find('span').addClass('selected');
-                    }
-                }
-            });
-            $('#carousel2').children().click(function() {
-                $('#carousel2').trigger( 'slideTo', [this, -4, 'prev'] );
-            });
-        });
-
-
-
-        $(function() {
-            $('#carousel3').carouFredSel({
-                direction: 'down',
-                width: 300,
-                height: 350,
-                align: false,
-                padding: [0, 0, 350, 0],
-                items: {
-                    width: 500,
-                    height: 30,
-                    visible: 5,
-                    minimum: 1
-                },
-                scroll: {
-                    items: 1,
-                    duration: 2000,
-                    onBefore: function( data ) {
-                        $('span', this).removeClass('selected');
-                        data.items.visible.last().find('span').addClass('selected');
-                    }
-                }
-            });
-            $('#carousel3').children().click(function() {
-                $('#carousel3').trigger( 'slideTo', [this, -4, 'prev'] );
-            });
-        });
-
-
-    </script>
 
 </head>
 
@@ -538,25 +339,25 @@
                                     <div class="col-md-7 col-xs-12">
                                         <div id="nt-example2-container">
                                             <ul id="nt-example2">
-                                                <li data-infos="Cras sagittis nulla sit amet feugiat pulvinar. Fusce scelerisque aliquet purus, sit amet rutrum augue euismod ut. Aliquam erat volutpat. Integer convallis, ligula non bibendum dictum, ante lectus fringilla nunc, at euismod neque enim sit amet ante. In risus velit, porttitor blandit magna vel, adipiscing semper libero. ">
+                                                <li data-infos="Belediye Başkan YAzısıtrum augue euismod ut. Aliquam erat volutpat. Integer convallis, ligula non bibendum dictum, ante lectus fringilla nunc, at euismod neque enim sit amet ante. In risus velit, porttitor blandit magna vel, adipiscing semper libero. ">
                                                     <i class="fa fa-fw fa-play state"></i>
-                                                    <span class="hour">08:12</span> Etiam imperdiet volutpat libero eu tristique.
+                                                    <span class="hour">08:12</span> Belediye Başkan YAzısı
                                                 </li>
-                                                <li data-infos="Quisque imperdiet, tellus et tempus mattis, risus ipsum molestie leo, in tincidunt nisl nunc at magna. Suspendisse pretium ullamcorper feugiat. Nunc quis egestas odio, eu vestibulum nisl. In hac habitasse platea dictumst. Aliquam vel dapibus lacus. Curabitur pharetra quam purus. Suspendisse sed nulla condimentum nibh blandit consectetur non eget velit.">
+                                                <li data-infos="Belediye Başkan YAzısı in tincidunt nisl nunc at magna. Suspendisse pretium ullamcorper feugiat. Nunc quis egestas odio, eu vestibulum nisl. In hac habitasse platea dictumst. Aliquam vel dapibus lacus. Curabitur pharetra quam purus. Suspendisse sed nulla condimentum nibh blandit consectetur non eget velit.">
                                                     <i class="fa fa-fw fa-play state"></i>
-                                                    <span class="hour">08:41</span> Curabitur porttitor ante eget hendrerit adipi.
+                                                    <span class="hour">08:41</span> Belediye Başkan YAzısı
                                                 </li>
                                                 <li data-infos="Vestibulum ac interdum quam, tempus aliquet purus. Nunc luctus augue ut pellentesque faucibus. Proin urna nunc, feugiat ac bibendum non, cursus id orci. Integer porttitor diam et odio pharetra, sed congue augue dapibus. Fusce ac tristique tortor. Aliquam adipiscing ligula in dui pretium ultrices.">
                                                     <i class="fa fa-fw fa-play state"></i>
-                                                    <span class="hour">10:02</span> Praesent ornare nisl lorem, ut condi.
+                                                    <span class="hour">10:02</span> Belediye Başkan YAzısı
                                                 </li>
                                                 <li data-infos="Proin vulputate mi pharetra tellus semper dapibus. Vestibulum non metus convallis, lobortis velit eu, facilisis mauris. Mauris mattis ante sit amet nulla egestas, ut consectetur tortor tristique. In porttitor non eros nec scelerisque. Sed eu condimentum tellus, et feugiat urna. Duis semper ligula a risus suscipit, ut vestibulum mi tempor.">
                                                     <i class="fa fa-fw fa-play state"></i>
-                                                    <span class="hour">10:14</span> Nunc ultrices tortor eu massa placerat posuere.
+                                                    <span class="hour">10:14</span> Belediye Başkan YAzısı
                                                 </li>
                                                 <li data-infos="Sed facilisis, erat at accumsan tincidunt, metus diam convallis tortor, at facilisis tortor libero sed ante. Sed ut felis sed felis scelerisque bibendum. Ut quis aliquet magna. Phasellus elementum volutpat mattis. Proin in rutrum ante, at imperdiet dolor. Vivamus congue turpis facilisis congue ullamcorper. Etiam sollicitudin quis dolor hendrerit ultricies.">
                                                     <i class="fa fa-fw fa-play state"></i>
-                                                    <span class="hour">11:23</span> Morbi sodales tellus sit amet leo congue bibendum.
+                                                    <span class="hour">11:23</span> Belediye Başkan YAzısı
                                                 </li>
                                                 <li data-infos="Raesent aliquam sapien quis pretium vestibulum. Vestibulum varius velit leo, quis facilisis enim mattis id. Proin et tempor ligula, id dapibus neque. Aliquam egestas adipiscing tellus. Morbi enim leo, fringilla eget vulputate tincidunt, fringilla et sapien. Curabitur ultricies auctor lectus, quis ultricies sem tincidunt sit amet. Mauris non tempor ipsum. Sed sed ipsum nulla. Quisque laoreet velit dolor, nec placerat odio ullamcorper eget.">
                                                     <i class="fa fa-fw fa-play state"></i>
@@ -568,7 +369,7 @@
                                                 </li>
                                                 <li data-infos="Duis euismod, mi nec posuere malesuada, nisl leo bibendum ligula, sit amet vestibulum est neque non sapien. Curabitur mi massa, bibendum cursus scelerisque imperdiet, semper eu lacus. Etiam mauris eros, faucibus eu pretium vitae, rutrum vel urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin laoreet pellentesque felis, sed vulputate justo rhoncus et. ">
                                                     <i class="fa fa-fw fa-play state"></i>
-                                                    <span class="hour">12:00</span> Onec bibendum consectetur diam, nec eui.
+                                                    <span class="hour">12:00</span> Belediye Başkan YAzısı
                                                 </li>
                                             </ul>
                                             <div id="nt-example2-infos-container">
@@ -752,6 +553,141 @@
                                 <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
                             </li>
 
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#" title="Cemaat operasyonu başladı: Kimler gözaltında?" target="_blank">
+                                    <img class="img-responsive" src="slider/s7.jpg" alt="Cemaat operasyonu başladı: Kimler gözaltında?" width="960" height="460"></a>
+                                <span>CEMAAT OPERASYONU BAŞLADI: KİMLER GÖZALTINDA?</span>
+                            </li>
+
+
+
+
+
+
+
 
 
 
@@ -764,7 +700,25 @@
                             <li class=""><a href="#" title="Erdoğan demediğini bırakmadı" target="_blank">4</a></li>
                             <li class=""><a href="#" title="NTV'yi sarsan tek cümlelik istifa" target="_blank">5</a></li>
                             <li class=""><a href="#" title="Öğretmen ve polislerin maaşı artıyor!" target="_blank">6</a></li>
-                            <li class=""><a href="#" title="17 Aralık iddalarıyla ilgili konuştu: Hesap için şartı var" target="_blank">7</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">7</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">8</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">9</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">10</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">11</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">12</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">13</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">14</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">15</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">16</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">17</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">18</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">19</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">20</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">21</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">22</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">23</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">24</a></li>
+                            <li class=""><a href="#" title="17 Aralık iddalarıyla B" target="_blank">25</a></li>
 
                         </ul>
                     </div>
@@ -991,51 +945,51 @@
     <div id="carousel">
         <div>
             <span>Haber Başlık 1 </span>
-            <img src="img/img_avatar1.png" alt="sport1" width="300" height="250" border="0" />
+            <img class="img-responsive" src="img/img_avatar1.png" alt="sport1" width="300" height="250" border="0" />
         </div>
         <div>
             <span>Cheese Rolling At Cooper's Hill, England</span>
-            <img src="img/img_avatar1.png" alt="sport2" width="300" height="250" border="0"/>
+            <img class="img-responsive" src="img/img_avatar1.png" alt="sport2" width="300" height="250" border="0"/>
         </div>
         <div>
             <span>The World Bog Snorkelling Championships, Wales</span>
-            <img src="img/img_avatar1.png" alt="sport3" width="300" height="250" border="0"/>
+            <img class="img-responsive" src="img/img_avatar1.png" alt="sport3" width="300" height="250" border="0"/>
         </div>
         <div>
             <span>Sepaktakraw, Qatar</span>
-            <img src="img/img_avatar1.png" alt="sport4" width="300" height="250" border="0"/>
+            <img class="img-responsive" src="img/img_avatar1.png" alt="sport4" width="300" height="250" border="0"/>
         </div>
         <div>
             <span class="selected">Chess-Boxing, Germany</span>
-            <img src="img/img_avatar1.png" alt="sport6" width="300" height="250" border="0"/>
+            <img class="img-responsive" src="img/img_avatar1.png" alt="sport6" width="300" height="250" border="0"/>
         </div>
     </div>
 
 
 </div>
-                        <div class="col-md-4 col-xs-12">
+ <div class="col-md-4 col-xs-12">
 
 
                         <div id="carousel2">
                             <div>
                                 <span>Haber Başlık 1 </span>
-                                <img src="img/img_avatar1.png" alt="sport1" width="300" height="250" border="0" />
+                                <img class="img-responsive" src="img/img_avatar1.png" alt="sport1" width="300" height="250" border="0" />
                             </div>
                             <div>
                                 <span>Cheese Rolling At Cooper's Hill, England</span>
-                                <img src="img/img_avatar1.png" alt="sport2" width="300" height="250" border="0"/>
+                                <img class="img-responsive" src="img/img_avatar1.png" alt="sport2" width="300" height="250" border="0"/>
                             </div>
                             <div>
                                 <span>The World Bog Snorkelling Championships, Wales</span>
-                                <img src="img/img_avatar1.png" alt="sport3" width="300" height="250" border="0"/>
+                                <img class="img-responsive" src="img/img_avatar1.png" alt="sport3" width="300" height="250" border="0"/>
                             </div>
                             <div>
                                 <span>Sepaktakraw, Qatar</span>
-                                <img src="img/img_avatar1.png" alt="sport4" width="300" height="250" border="0"/>
+                                <img class="img-responsive" src="img/img_avatar1.png" alt="sport4" width="300" height="250" border="0"/>
                             </div>
                             <div>
                                 <span class="selected">Chess-Boxing, Germany</span>
-                                <img src="img/img_avatar1.png" alt="sport6" width="300" height="250" border="0"/>
+                                <img class="img-responsive" src="img/img_avatar1.png" alt="sport6" width="300" height="250" border="0"/>
                             </div>
                         </div>
 
@@ -1052,23 +1006,23 @@
                             <div id="carousel3">
                                 <div>
                                     <span>Haber Başlık 1 </span>
-                                    <img src="img/img_avatar1.png" alt="sport1" width="300" height="250" border="0" />
+                                    <img class="img-responsive" src="img/img_avatar1.png" alt="sport1" width="300" height="250" border="0" />
                                 </div>
                                 <div>
                                     <span>Cheese Rolling At Cooper's Hill, England</span>
-                                    <img src="img/img_avatar1.png" alt="sport2" width="300" height="250" border="0"/>
+                                    <img class="img-responsive" src="img/img_avatar1.png" alt="sport2" width="300" height="250" border="0"/>
                                 </div>
                                 <div>
                                     <span>The World Bog Snorkelling Championships, Wales</span>
-                                    <img src="img/img_avatar1.png" alt="sport3" width="300" height="250" border="0"/>
+                                    <img class="img-responsive" src="img/img_avatar1.png" alt="sport3" width="300" height="250" border="0"/>
                                 </div>
                                 <div>
                                     <span>Sepaktakraw, Qatar</span>
-                                    <img src="img/img_avatar1.png" alt="sport4" width="300" height="250" border="0"/>
+                                    <img class="img-responsive" src="img/img_avatar1.png" alt="sport4" width="300" height="250" border="0"/>
                                 </div>
                                 <div>
                                     <span class="selected">Chess-Boxing, Germany</span>
-                                    <img src="img/img_avatar1.png" alt="sport6" width="300" height="250" border="0"/>
+                                    <img class="img-responsive" src="img/img_avatar1.png" alt="sport6" width="300" height="250" border="0"/>
                                 </div>
                             </div>
 

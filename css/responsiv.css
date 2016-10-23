@@ -136,11 +136,11 @@ Tarif: stül-ü sahih-i Stül-ü fasıktan ayırmak
       width: 100%;
         height: auto !important;
     }
-    .MEFmanset .manset_resimler{width:100%;height:auto;}
-    .MEFmanset .manset_resimler img{border:none;text-decoration:none;width:100%;height:auto;}
+    .MEFmanset .manset_resimler{width:100% !important;height:auto!important;}
+    .MEFmanset .manset_resimler img{border:none;text-decoration:none;width:100%!important;height:auto!important;}
 
-    .MEFmanset .manset_resimler li{position:relative;width:100%;height:auto;display:none;}
-    .MEFmanset .manset_resimler li img{width:100%;height:auto;}
+    .MEFmanset .manset_resimler li{position:relative;width:100%;height:auto!important;display:none;}
+    .MEFmanset .manset_resimler li img{width:100% !important;height:auto!important;}
     #son-dakika{
         width: 100%;
         display: inline-block;
@@ -156,5 +156,120 @@ Tarif: stül-ü sahih-i Stül-ü fasıktan ayırmak
         margin-left: 40px !important;
     }
 
+    #carousel3 {
+        padding-top: 350px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    #carousel3 div {
+        width: 200px;
+        height: 380px;
+        margin-top: -350px;
+        position: relative;
+    }
 
+    #carousel3 div span {
+
+        font-size: 13px;
+        text-align: center;
+
+    }
+
+    #carousel {
+        padding-top: 350px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    #carousel div {
+        width: 200px;
+        height: 380px;
+        margin-top: -350px;
+        position: relative;
+    }
+
+    #carousel div span {
+
+        font-size: 13px;
+        text-align: center;
+
+    }
+
+    #carousel2 {
+        padding-top: 350px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    #carousel2 div {
+        width: 200px;
+        height: 380px;
+        margin-top: -350px;
+        position: relative;
+    }
+
+    #carousel2 div span {
+
+        font-size: 13px;
+        text-align: center;
+
+    }
+
+    .MEFmanset .manset_butonlar li{float:left;width: 10%;
+        line-height: 26px;
+        height: 27px; background:linear-gradient(tobottom,#efeded0,#fff7f750%,#efeded100%);font-family:oswald,Arial,sans-serif;}
+    .MEFmanset span{width:100%;height:38px;background: rgba(0, 0, 0, 0.5);
+        display:block;text-shadow:1px 1px 0 #000;font-size:20px;color: #ebebeb;
+        font-family:oswald,Arial,sans-serif;font-weight:700;overflow:hidden;top:0px !important;
+        text-align:center;position:relative !important;z-index:4;margin:0;padding:5px 0 0;}
+    .MEFmanset span:hover{color: #353535;background: rgba(255, 255, 255, 0.5)}
+
+    #wrapper5 {
+        width: 120%;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        margin-left:  30px;
+
+
+    }
+
+    #wrapper5 .carousel5 {
+        display: inline-block;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 250px;
+        margin: 0 16px 16px 0;
+    }
+    .MEFmanset .manset_butonlar li{
+        width: 10% !important;
+        line-height: 26px !important;
+        height: 27px !important ;
+
+    }
+    #next {
+        background-position: -19px 0;
+        margin-left: 300px !important;
+        top: -75px !important;
+    }
+    #prev {
+        background-position: 0 0;
+        left: 6px !important;
+        top: -66px !important ;
+    }
+
+    #wrapper4 {
+       display: none;
+
+    }
+    #galeri-index{
+        display: none;
+    }
+    #thumbs-wrapper6{
+        padding: 11px 5px;
+    }
+    #next6 {
+        background-position: -19px 0;
+        margin-left: 280px !important;
+        top: -50px !important;
+    }
 }
